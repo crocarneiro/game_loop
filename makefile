@@ -1,5 +1,5 @@
 all:
-	gcc -Wall -std=c99 ./src/*.c -o game
+	gcc ./src/*.c -o game -Wall -std=c99 -lSDL2
 
 run:
 	./game
