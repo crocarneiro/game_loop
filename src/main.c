@@ -76,12 +76,15 @@ void setup()
 
 void update()
 {
+	// Waste time until the frame target is reached.
 	while(!SDL_TICKS_PASSED(SDL_GetTicks(), last_frame_time + FRAME_TARGET_TIME));
+
+	//Get delta time factor converted to seconds to be used to update my objects.
+	float delta_time = (SDL_GetTicks() - last_frame_time) / 1000.0f;
 	last_frame_time = SDL_GetTicks();
 
-
-	ball.x += 1;
-	ball.y += 1;
+	ball.x += 70 * delta_time;
+	ball.y += 50 * delta_time;
 }
 
 void render()
