@@ -63,6 +63,10 @@ void update()
 
 void render()
 {
+	SDL_SetRenderDrawColor(renderer, 194, 58, 135, 255);
+	SDL_RenderClear(renderer);
+
+	SDL_RenderPresent(renderer);
 }
 
 void destroy_window()
